@@ -1,5 +1,6 @@
 FROM alpine:3.3
 
-RUN apk add --update nginx
+RUN apk --no-cache add nginx
 
-ENTRYPOINT ["nginx"]
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
