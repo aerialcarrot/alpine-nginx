@@ -4,7 +4,7 @@ echo --- Integration Tests ---
 
 ### Variables ###
 
-hostname="localhost"
+hostname="docker-host1.shef.ac.uk"
 application="Test Alpine Nginx Container $(date +$s)" #randomized
 
 echo Hostname: ${hostname}
