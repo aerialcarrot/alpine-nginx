@@ -17,6 +17,6 @@ url="http://${hostname}"
 echo ${url}
 curl -X GET -H 'Accept: application/html; charset=UTF-8' \
 --url "${url}" \
-| grep alpine-nginx > /dev/null
+| grep not-here > /dev/null
 [ "$?" -ne 0 ] && echo "RESULT: fail" && exit 1
 echo "RESULT: pass"
