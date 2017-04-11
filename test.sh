@@ -4,7 +4,7 @@ echo --- Integration Tests ---
 
 ### Variables ###
 
-hostname="docker-host1.shef.ac.uk"
+hostname="localhost"
 application="Test Alpine Nginx Container $(date +$s)" #randomized
 
 echo Hostname: ${hostname}
@@ -17,6 +17,5 @@ echo ${url}
 curl -X GET -H 'Accept: application/html; charset=UTF-8' \
 --url "${url}" \
 | grep alpine-nginx > /dev/null
-echo "$?"
 [ "$?" -ne 0 ] && echo "RESULT: fail" && exit 1
 echo "RESULT: pass"
