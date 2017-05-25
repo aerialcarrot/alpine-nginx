@@ -17,7 +17,19 @@ spec:
       containers:
       - name: nginx
         image: docker-host1.shef.ac.uk/alpine-nginx:latest
-        ports:
-        - containerPort: 80
      imagePullSecrets:
      - name: registrypullsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+  labels:
+    kubernetes.io/cluster-service: "true"
+    kubernetes.io/name: "nginx"
+spec:
+  selector:
+    k8s-app: nginx
+  ports:
+  - port: 80
+    targetPort: 80
