@@ -1,16 +1,18 @@
-apiVersion: v1
-kind: ReplicationController
+apiVersion: extensions/v1beta1
+kind: Deployment
 metadata:
   name: nginx
 spec:
-  replicas: 2
+  replicas: 1
   selector:
-    app: nginx
+    matchLabels:
+      k8s-app: nginx
+  minReadySeconds: 10
   template:
     metadata:
-      name: nginx
       labels:
-        app: nginx
+        k8s-app: nginx
+        version: v1.0
     spec:
       containers:
       - name: nginx
