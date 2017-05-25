@@ -26,8 +26,9 @@ metadata:
   name: nginx
   labels:
     kubernetes.io/cluster-service: "true"
-    kubernetes.io/name: "nginx"
+    kubernetes.io/name: "nginx"    
 spec:
+  type: "NodePort"
   selector:
     k8s-app: nginx
   ports:
