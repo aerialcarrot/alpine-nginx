@@ -17,3 +17,5 @@ spec:
         image: docker-host1.shef.ac.uk/alpine-nginx:latest
         ports:
         - containerPort: 80
+     imagePullSecrets:
+      - name: registrypullsecret
