@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'nginx --version'
+                sh 'nginx -v'
             }
         }
     }
