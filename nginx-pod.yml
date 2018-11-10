@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: docker-host1.shef.ac.uk/alpine-nginx:latest
+          image: <docker-registry>/alpine-nginx:latest
       imagePullSecrets:
         - name: registrypullsecret
 ---
